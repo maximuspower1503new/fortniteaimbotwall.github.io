@@ -1,0 +1,133 @@
+/* CSS for all screen sizes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.banner {
+    width: 100%;
+    min-height: 100vh; 
+    background: linear-gradient(60deg,rgba(0,0,0,0.1),rgba(0,0,0,0.2)), url("sitebackground.jpg");        
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+.top {
+    width: 85%;
+    max-width: 1000px; /* Add a maximum width to prevent content from becoming too wide on large screens */
+    height: 200px;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: left;
+}
+
+#logo-img {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;     
+}
+
+.mid-section-container {
+    width: 85%;
+    max-width: 800px; /* Add a maximum width to prevent content from becoming too wide on large screens */
+    height: 400px;
+    border: 2px solid black;
+    background:linear-gradient(33deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.mid-section-container h1 {
+    
+    margin-bottom: 50px;    
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-decoration:solid;
+}
+.mid-section-container h1::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -4px;
+    left: 0;
+    background-color: black;
+}
+
+.mid-section-container h1, h2{
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: 600;    
+    text-align: center;
+    color: white;
+}
+.mid-section-container h1{
+    color: darkgoldenrod;
+}
+.btn-container{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.mid-section-container a {
+    margin-top: 50px;
+    border: 2px solid black;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    border-radius: 15px;   
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: linear-gradient(33deg,rgba(0,255,0),rgba(0,100,0,0.3));
+}
+
+.mid-section-container a span {
+    position: absolute;
+    background: linear-gradient(-33deg,rgba(0,255,222),rgba(0,255,0));
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;  
+    transition: 0.5s;  
+}
+
+.mid-section-container a:hover span {
+    width: 100%;
+}
+.mid-section-container a:hover{
+    color: white;
+    background: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .top {
+        height: 150px; /* Adjust the height for smaller screens */
+    }
+
+    #logo-img {
+        width: 80px; /* Adjust the image size for smaller screens */
+        height: 80px;
+    }
+
+    .mid-section-container {
+        height: auto; /* Adjust the height for smaller screens to make it adapt to content */
+    }
+}
